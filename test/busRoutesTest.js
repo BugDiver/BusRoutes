@@ -66,6 +66,14 @@ describe('Transport', function() {
         });
     });
 
+    describe('getAllStations',function(){
+    	it('should give list of all sations',function(){
+    		r.initializeTransport(cityData);
+    		var stations =["A","B","C","D","E","F","G","C1","D1","E1","F1","D2","H","E2",
+		    				"F2","G1","H1","R","S","T","K","L","M","U","V","W","I","J","C2","G2"];
+    		expect(r.getAllStations()).to .be.eql(stations)
+    	});
+    });
     describe('getAlternateBuses', function() {
         it('should give a alternate bus between to location', function() {
             r.initializeTransport(cityData);
