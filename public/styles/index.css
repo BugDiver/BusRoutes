@@ -1,0 +1,29 @@
+h1{
+	text-align: center;
+}
+h2{
+	text-align: center;
+}
+
+select{
+	width: 20%;
+	font-size: larger;
+}
+
+.input{
+	text-align: center;
+}
+.input>button{
+	width: 12%;
+	height: 35px;
+	font-size: larger;
+}
+table{
+	text-align: center;
+	width: 60%;
+	margin-left: 20%;
+	font-size: 150%
+}
+td{
+	height: 20%
+}

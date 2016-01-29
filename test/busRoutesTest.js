@@ -74,16 +74,16 @@ describe('Transport', function() {
     		expect(r.getAllStations()).to .be.eql(stations)
     	});
     });
-    describe('getAlternateBuses', function() {
+    describe('getAlternateBusesBetween', function() {
         it('should give a alternate bus between to location', function() {
             r.initializeTransport(cityData);
-            var allAlternatePaths = [ { "A_to_B":["1","2"], "B_to_G1":["4"] },
-            						  { "A_to_D":["1"], "D_to_G1":["4","7"] },
-            						  { "A_to_F1":["2"], "F1_to_G1":["7"] },
-            						  { "A_to_E":["1"], "E_to_G1":["7"] }
+            var allAlternatePaths = [ { "A":["1","2"], "B":["4"] },
+            						  { "A":["1"], "D":["4","7"] },
+            						  { "A":["2"], "F1":["7"] },
+            						  { "A":["1"], "E":["7"] }
             						];
 
-            expect(r.getAlternateBuses('A', 'G1')).to.be.eql(allAlternatePaths);
+            expect(r.getAlternateBusesBetween('A', 'G1')).to.be.eql(allAlternatePaths);
 
         });
     });
