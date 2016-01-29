@@ -1,14 +1,14 @@
 var expect = require('chai').expect;
 var Transport = require('../lib/busRoutes');
 
-var cityData = '1:A,B,C,D,E,F,G\r\n' +
-    '2:A,B,C1,D1,E1,F1\r\n' +
-    '3:C,D1,D2,F1,H\r\n' +
-    '4:B,D,E2,F2,G1,H1\r\n' +
-    '5:C,R,S,T,K,L,M\r\n' +
-    '6:C,R,S,T,U,V,W\r\n' +
-    '7:D,E,F1,G1,H1,I,J\r\n' +
-    '8:B,C2,D2,E2,F2,G2';
+var cityData = [  { busNo: '1', stations: [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ] },
+                  { busNo: '2', stations: [ 'A', 'B', 'C1', 'D1', 'E1', 'F1' ] },
+                  { busNo: '3', stations: [ 'C', 'D1', 'D2', 'F1', 'H' ] },
+                  { busNo: '4', stations: [ 'B', 'D', 'E2', 'F2', 'G1', 'H1' ] },
+                  { busNo: '5', stations: [ 'C', 'R', 'S', 'T', 'K', 'L', 'M' ] },
+                  { busNo: '6', stations: [ 'C', 'R', 'S', 'T', 'U', 'V', 'W' ] },
+                  { busNo: '7', stations: [ 'D', 'E', 'F1', 'G1', 'H1', 'I', 'J' ] },
+                  { busNo: '8', stations: [ 'B', 'C2', 'D2', 'E2', 'F2', 'G2' ] } ]
 
 var r;
 beforeEach(function() {
